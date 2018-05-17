@@ -237,7 +237,7 @@ void game(char *player1, char *player2)//Start game
         }
         else
             trigger = 2;
-        char anm1[5][50] =
+        char player[5][50] =
         {
             {a,a,0,0,0,a,0,0,a,a,a,a,0,0,a,0,0,0,a,0,0,a,a,a,a,0,0,a,a,0,0},
             {a,0,a,0,0,a,0,0,a,0,0,a,0,0,0,a,0,a,0,0,0,a,0,0,0,0,0,a,0,a,0},
@@ -245,7 +245,7 @@ void game(char *player1, char *player2)//Start game
             {a,0,0,0,0,a,0,0,a,0,0,a,0,0,0,0,a,0,0,0,0,a,0,0,0,0,0,a,a,0,0},
             {a,0,0,0,0,a,0,0,a,0,0,a,0,0,0,0,a,0,0,0,0,a,a,a,a,0,0,a,0,a,0},
         };//For 'Player' logo
-        char anm2[6][30] =
+        char wins[6][30] =
         {
             {a,0,0,0,a,0,0,a,0,0,a,0,0,0,a,0,0,0,a,a,0},
             {a,0,0,0,a,0,0,a,0,0,a,a,0,0,a,0,0,a,0,0,a},
