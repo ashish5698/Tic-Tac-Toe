@@ -18,7 +18,7 @@ void menu()//main menu
 {
     char a = 219;
     int i, j;
-    char str[7][50] =
+    char str[7][50] 
     {
         {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
         {0,a,a,a,a,a,0,0,a,0,0,a,a,a,a,0,0,a,a,a,a,a,0,0,a,a,a,a,0,0,a,a,a,a},
@@ -35,7 +35,7 @@ void menu()//main menu
         {0,0,a,0,0,0,0,a,0,0,a,0,0,a,a,a,a,0},
         {0,0,a,0,0,0,0,a,0,0,a,0,0,a,0,0,0,0},
         {0,0,a,0,0,0,0,a,a,a,a,0,0,a,a,a,a,a},
-    };
+    };//These above two 2d Arrays are for creating the logo
     while(1)
     {
         system("cls");
@@ -149,7 +149,7 @@ void game(char *player1, char *player2)//Start game
         {a,0,a,0,a,0,0,a,a,a,0,0,0,a,0,0,a,0,0,0,0,0,a,0,0,a,0,0,a,0,a,0,a,0,0,a,a,a,0},
         {a,a,0,a,a,0,0,a,0,0,0,0,0,a,0,0,a,0,0,0,0,0,a,0,0,a,0,0,a,0,0,0,a,0,0,a,0,0,0},
         {a,0,0,0,a,0,0,a,a,a,a,0,0,a,0,0,a,a,a,a,0,0,a,a,a,a,0,0,a,0,0,0,a,0,0,a,a,a,a},
-    };
+    };//this 2d array id for welcome logo
     for(i = 0; i < 10; i++)
     {
         printf("\n");
@@ -244,7 +244,7 @@ void game(char *player1, char *player2)//Start game
             {a,a,0,0,0,a,0,0,a,a,a,a,0,0,0,0,a,0,0,0,0,a,a,a,0,0,0,a,a,0,0},
             {a,0,0,0,0,a,0,0,a,0,0,a,0,0,0,0,a,0,0,0,0,a,0,0,0,0,0,a,a,0,0},
             {a,0,0,0,0,a,0,0,a,0,0,a,0,0,0,0,a,0,0,0,0,a,a,a,a,0,0,a,0,a,0},
-        };
+        };//For 'Player' logo
         char anm2[6][30] =
         {
             {a,0,0,0,a,0,0,a,0,0,a,0,0,0,a,0,0,0,a,a,0},
@@ -253,7 +253,7 @@ void game(char *player1, char *player2)//Start game
             {a,0,a,0,a,0,0,a,0,0,a,0,a,a,a,0,0,0,0,a,0},
             {a,a,0,a,a,0,0,a,0,0,a,0,0,a,a,0,0,a,0,0,a},
             {a,0,0,0,a,0,0,a,0,0,a,0,0,0,a,0,0,0,a,a,0}
-        };
+        };//For 'Wins'Logo
         char one[7][4] =
         {
             {0,a,0},
@@ -261,7 +261,7 @@ void game(char *player1, char *player2)//Start game
             {0,a,0},
             {0,a,0},
             {a,a,a},
-        };
+        };//If First player wins then this blove 2d array is used to print '1'
         char two[5][4] =
         {
             {0,a,a,0},
@@ -269,7 +269,7 @@ void game(char *player1, char *player2)//Start game
             {0,0,a,0},
             {0,a,0,0},
             {a,a,a,a},
-        };
+        };//If second player wins then this blove 2d array is used to print '2'
         setColor(RED);
         for(i = 0; i < 10; i++)
         {
@@ -335,7 +335,7 @@ void game(char *player1, char *player2)//Start game
             {a,0,a,0,0,a,a,a,0,0,0,a,a,a,a,0,0,a,0,a,0,a},
             {a,0,a,0,0,a,0,a,0,0,0,a,0,0,a,0,0,a,a,0,a,a},
             {a,a,0,0,0,a,0,0,a,0,0,a,0,0,a,0,0,a,0,0,0,a},
-        };
+        };//If no one wins then this 2d array is used to print 'Draw'
         system("cls");
         for(i = 0; i < 10; i++)
         {
@@ -355,8 +355,7 @@ void game(char *player1, char *player2)//Start game
         setColor(BLACK);
     }
 }
-
-int checkwin()//check if there a three row combination
+int checkwin()//check if there is a three row combination or column or diagonal combinations
 {
    if(square[1]==square[2] && square[2]==square[3])
         return 1;
@@ -384,13 +383,13 @@ void board()//board structure
 {
     char a = 219, b = 220;
     printf("\t\t\t"space"    %c   %c   \n", a, a);
-    printf("\t\t\t"space"   %c%c  %c%c  %c\n", square[1], a, square[2], a, square[3]);
+    printf("\t\t\t"space"  %c %c %c %c %c\n", square[1], a, square[2], a, square[3]);
     printf("\t\t\t"space" %c%c%c%c%c%c%c%c%c%c%c\n", b, b, b, a, b, b, b, a, b, b, b);
     printf("\t\t\t"space"    %c   %c   \n", a, a);
-    printf("\t\t\t"space"   %c%c  %c%c  %c\n", square[4], a, square[5], a, square[6]);
+    printf("\t\t\t"space"  %c %c %c %c %c\n", square[4], a, square[5], a, square[6]);
     printf("\t\t\t"space" %c%c%c%c%c%c%c%c%c%c%c\n", b, b, b, a, b, b, b, a, b, b, b);
     printf("\t\t\t"space"    %c   %c   \n", a, a);
-    printf("\t\t\t"space"   %c%c  %c%c  %c\n", square[7], a, square[8], a, square[9]);
+    printf("\t\t\t"space"  %c %c %c %c %c\n", square[7], a, square[8], a, square[9]);
     printf("\t\t\t"space"    %c   %c   \n", a, a);
 }
 
@@ -416,7 +415,7 @@ void animation()//starting page
         {0,0,a,0,0,0,0,a,0,0,a,0,0,a,a,a,a,0},
         {0,0,a,0,0,0,0,a,0,0,a,0,0,a,0,0,0,0},
         {0,0,a,0,0,0,0,a,a,a,a,0,0,a,a,a,a,a},
-    };
+    };//The above 2d arrays are used for printing 'TIC-TAC-TOE'
     int i, j, k = 0, count = 0;
     while(k != 15)
     {
@@ -511,7 +510,7 @@ void rules()
         {0,0,a,0,0,0,0,a,0,0,a,0,0,a,a,a,a,0},
         {0,0,a,0,0,0,0,a,0,0,a,0,0,a,0,0,0,0},
         {0,0,a,0,0,0,0,a,a,a,a,0,0,a,a,a,a,a},
-    };
+    };//the above 2d arrays are used to print 'TIC-TAC-T0E' in rules page
     setColor(BLUE);
     printf("\n");
     for(i = 0; i < 7; i++)
