@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "rutil.h"//downloaded header file for colors,etc
+#include "rlutil.h"//downloaded header file for colors,etc
 #include <string.h>
 #include <stdlib.h>
 #include <windows.h>
